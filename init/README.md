@@ -1,4 +1,4 @@
-MSent Ionic Mobile App
+Ionic Mobile App
 ==================
 
 Get started:
