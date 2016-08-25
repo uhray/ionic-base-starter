@@ -1,0 +1,33 @@
+<ion-view view-title="Photos">
+  <ion-nav-buttons side="right">
+    <a class="button button-clear back-button button-right"
+            href="#/app/home/compose/confirm">Next</a>
+  </ion-nav-buttons>
+  <ion-content class="padding">
+    <div ng-repeat="x in img" ng-if="$index % 4 == 0" class="row image-squares">
+        <div class="col col-25">
+          <div class="img" ng-click="managePicture($index)"
+               style="background-image:url({{img[$index]}})"></div>
+        </div>
+        <div class="col col-25" ng-if="img.length > ($index + 1)">
+          <div class="img" ng-click="managePicture($index + 1)"
+               style="background-image:url({{img[$index + 1]}})"></div>
+        </div>
+        <div class="col col-25" ng-if="img.length > ($index + 2)">
+          <div class="img" ng-click="managePicture($index + 2)"
+               style="background-image:url({{img[$index + 2]}})"></div>
+        </div>
+        <div class="col col-25" ng-if="img.length > ($index + 3)">
+          <div class="img" ng-click="managePicture($index + 3)"
+               style="background-image:url({{img[$index + 3]}})"></div>
+        </div>
+    </div>
+    <div class="card" ng-show="!img.length">
+      <div class="item item-text-wrap" style="text-align: center">
+        Add photos to your order!
+      </div>
+    </div>
+    <button class="ui button fluid primary"
+            ng-click="choosePhotos()">Add Photos</button>
+  </ion-content>
+</ion-view>
