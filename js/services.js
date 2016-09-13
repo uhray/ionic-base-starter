@@ -1,6 +1,6 @@
 
 
-angular.module('starter')
+angular.module('app')
 .factory('AuthenticationService', function($q, appConfig, $ionicPlatform) {
   var self = {};
 
