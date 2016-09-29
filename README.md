@@ -5,6 +5,6 @@ To use this, run:
 ```
 ionic start <myAppName> "https://github.com/uhray/ionic-base-starter"
 cd <myAppName>
-./www/init.sh
+bash ./www/init.sh
 ionic serve
 ```

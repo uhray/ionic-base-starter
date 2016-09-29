@@ -37,7 +37,7 @@ gulp.task('config', function(done) {
 
   // Create config.js file
   json = JSON.stringify(config),
-  str = `angular.module('starter').constant('appConfig', ${json})`,
+  str = `angular.module('app').constant('appConfig', ${json})`,
 
   // clear cache
   delete require.cache[path.join(__dirname, fn)];
